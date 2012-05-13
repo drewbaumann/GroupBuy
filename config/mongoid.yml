@@ -1,0 +1,16 @@
+development:
+  host: localhost
+  database: group_buy_development
+
+test:
+  host: localhost
+  database: group_buy_test
+
+# set these environment variables on your prod server
+production:
+  uri: mongodb://admin:groupit@ds033187.mongolab.com:33187/groupbuy-prod
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019

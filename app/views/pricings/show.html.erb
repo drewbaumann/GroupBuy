@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Object count:</b>
+  <%= @pricing.object_count %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @pricing.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_pricing_path(@pricing) %> |
+<%= link_to 'Back', pricings_path %>

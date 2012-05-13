@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  object_count: 1
+  price: 1.5
+
+two:
+  object_count: 1
+  price: 1.5
