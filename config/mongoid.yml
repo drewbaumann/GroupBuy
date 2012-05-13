@@ -8,7 +8,7 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: #your uri
+  uri: <%= ENV["MONGODB"] %>
   # slaves:
   #   - host: slave1.local
   #     port: 27018
