@@ -8,7 +8,7 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: mongodb://admin:groupit@ds033187.mongolab.com:33187/groupbuy-prod
+  uri: #your uri
   # slaves:
   #   - host: slave1.local
   #     port: 27018
