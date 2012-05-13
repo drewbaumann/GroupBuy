@@ -25,14 +25,13 @@ class User
   field :last_sign_in_ip,    :type => String
   
   ## User values
-  field :email, :type => String
   field :paypal_email, :type => String
   field :shipping_address, :type => String
   field :username, :type => String
   
 
   attr_accessor :login
-  attr_accessible :login
+  attr_accessible :login, :email, :password, :shipping_address, :username
   
   has_many :campaigns
   has_many :invoices

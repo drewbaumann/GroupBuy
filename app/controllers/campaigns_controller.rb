@@ -1,6 +1,7 @@
 class CampaignsController < ApplicationController
   # GET /campaigns
   # GET /campaigns.json
+  before_filter :authenticate_user!, :except => [:index]
   def index
     @campaigns = Campaign.all
 
