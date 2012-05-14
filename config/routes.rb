@@ -7,7 +7,18 @@ GroupBuy::Application.routes.draw do
 
   resources :campaigns
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => 'registrations'}
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+    #     match "/users/manage"               => 'registrations#manage_users', :as => "manage_users"
+    #     match "/user/:id/edit_as_admin"     => 'registrations#edit_as_admin', :as => "edit_as_admin"
+    #     match "/user/:id/update_as_admin"   => 'registrations#update_as_admin', :as => "update_as_admin"
+    # match "/users/manage_deleted"       => 'registrations#manage_deleted_users', :as => "manage_deleted_users"
+    # match "/user/:id/soft_delete_user"  => 'registrations#delete_user', :as => "delete_user"
+    # match "/user/:id/restore"           => 'registrations#restore_user', :as => "restore_user"
+  end
+  resources :user, :controller => "registrations"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

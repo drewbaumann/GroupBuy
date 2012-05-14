@@ -7,6 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+	  <ul class="nav">
+		<li class="dropdown">
+		   <a href="#"
+		          class="dropdown-toggle"
+		          data-toggle="dropdown">
+		          Campaigns
+		          <b class="caret"></b>
+		    </a>
+		    <ul class="dropdown-menu">
+			  <li><a href="#">Link</a></li>
+			  <% if current_user %>
+			  	<li><a href="#">One's I'm in</a></li>
+			  <% end %>
+		    </ul>
+		  </li>
+	    <li><a href="#">Link</a></li>
+	    <li><a href="#">Link</a></li>
+	  </ul>
+	  <ul class="nav pull-right">
+      <% if current_user %>
+      <li><%=link_to "Sign Out", destroy_user_session_path%></li>
+      <% else %>
+		    <li><%=link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+	  </ul>
+ 	  	
+	  
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 
