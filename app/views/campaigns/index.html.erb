@@ -15,7 +15,7 @@
 <% @campaigns.each do |campaign| %>
   <tr>
     <td><%= campaign.name %></td>
-    <td><%= campaign.description %></td>
+    <td><%= markdown campaign.description %></td>
     <td><%= campaign.owner_id %></td>
     <td><%= campaign.end_date %></td>
     <td><%= campaign.status %></td>
