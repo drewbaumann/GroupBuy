@@ -39,7 +39,7 @@ class User
   protected
 
   def self.find_for_database_authentication(conditions)
-    login = conditions.delete(:login)
+    login = conditions.delete(:email)
     self.any_of({ :username => /^#{Regexp.escape(login)}$/i }, { :email => /^#{Regexp.escape(login)}$/i }).first
   end
 
